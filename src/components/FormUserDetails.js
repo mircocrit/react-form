@@ -3,6 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -13,7 +14,7 @@ export class FormUserDetails extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-          <Dialog open fullWidth  maxWidth='sm'>
+         <Container>
             <AppBar title="Enter User Details" />
             <TextField placeholder="Enter Your First Name" label="First Name" margin="normal" fullWidth
               defaultValue={values.firstName} onChange={handleChange('firstName')} />
@@ -25,7 +26,7 @@ export class FormUserDetails extends Component {
               defaultValue={values.email} onChange={handleChange('email')} />
             <br />
             <Button color="primary" variant="contained" onClick={this.continue}>Continue</Button>
-          </Dialog>
+          </Container>
     );
   }
 }

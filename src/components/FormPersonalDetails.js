@@ -3,6 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 
 export class FormPersonalDetails extends Component {
   continue = e => {
@@ -18,7 +19,7 @@ export class FormPersonalDetails extends Component {
   render() {
     const { values, handleChange } = this.props;
     return (
-          <Dialog open fullWidth  maxWidth='sm'>
+        <Container>
             <AppBar title="Enter Personal Details" />
             <TextField placeholder="Enter Your Occupation" label="Occupation" margin="normal" fullWidth
               onChange={handleChange('occupation')} defaultValue={values.occupation} />
@@ -31,7 +32,7 @@ export class FormPersonalDetails extends Component {
             <br />
             <Button color="secondary" variant="contained" onClick={this.back}>Back</Button>
             <Button color="primary" variant="contained" onClick={this.continue}>Continue</Button>
-          </Dialog>
+        </Container>
     );
   }
 }

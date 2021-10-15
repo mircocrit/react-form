@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import Container from '@mui/material/Container';
 
 export class Confirm extends Component {
   continue = e => {
@@ -23,7 +24,7 @@ export class Confirm extends Component {
       values: { firstName, lastName, email, occupation, city, bio }
     } = this.props;
     return (
-          <Dialog open fullWidth maxWidth='sm'>
+        <Container>
             <AppBar title="Confirm User Data" />
             <List>
               <ListItem>
@@ -48,7 +49,7 @@ export class Confirm extends Component {
             <br />
             <Button color="secondary" variant="contained" onClick={this.back}>Back</Button>
             <Button color="primary" variant="contained" onClick={this.continue}>Confirm & Continue</Button>
-          </Dialog>
+        </Container>
     );
   }
 }

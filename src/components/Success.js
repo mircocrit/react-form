@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
+import Container from '@mui/material/Container';
 
 export class Success extends Component {
   continue = e => {
@@ -16,11 +17,11 @@ export class Success extends Component {
 
   render() {
     return (
-          <Dialog open fullWidth maxWidth='sm'>
+        <Container>
             <AppBar title="Success" />
             <h1>Thank You For Your Submission</h1>
             <p>You will get an email with further instructions.</p>
-          </Dialog>
+        </Container>
     );
   }
 }
